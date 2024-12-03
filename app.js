@@ -22,9 +22,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect('mongodb://localhost:27017/md19302')
+mongoose.connect('mongodb+srv://sonbxps40538:Fz9XrTPcdIqEkrC4@cluster.7umct.mongodb.net/')
 .then(() => console.log('>>>>>>>>>> DB Connected!!!!!!'))
 .catch(err => console.log('>>>>>>>>> DB Error: ', err));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/sinhvien',sinhvienRouter);
