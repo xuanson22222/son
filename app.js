@@ -4,12 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+require('./model/sinhvien');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var sinhvienRouter = require('./routes/sinhvien');
-const mongoose=require("mongoose");
-require('./model/sinhvien')
+
 var app = express();
 
 // view engine setup
